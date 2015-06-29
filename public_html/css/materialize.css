@@ -8048,4 +8048,34 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   padding: 50px;
   font-size: 20pt; }
 
+.spielen-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: white; }
+  .spielen-container .word {
+    width: 100%;
+    text-align: center;
+    font-size: 32pt;
+    margin-top: calc(50vh - 32px); }
+  .spielen-container .countdown {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 32pt; }
+
+.word-was-true {
+  background-color: green;
+  color: white; }
+
+.word-was-false {
+  background-color: red;
+  color: white; }
+
+.play-again {
+  background-color: blue;
+  color: white; }
+
 /*# sourceMappingURL=materialize.css.map */

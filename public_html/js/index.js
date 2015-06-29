@@ -1,4 +1,22 @@
 
+var deviceOrientation = window.innerWidth > window.innerHeight ? "landscape" : "portrait";
+
+window.onorientationchange = function() {
+  switch(window.orientation) {
+    case 0:
+      deviceOrientation = "portrait";
+      break;
+    case 90:
+      deviceOrientation = "landscape";
+      break;
+    case -90:
+      deviceOrientation = "reverse landscape";
+      break;
+    case 180:
+      deviceOrientation = "portrait";
+      break;
+  }
+}
 
 window.addEventListener("deviceorientation", function(event) {
     
@@ -27,12 +45,15 @@ $.get("views/main.html", function(data) {
     $("#container").html(data);
 });
 
+var pageData = categories;
 function openPage(page, json, callback) {
     
     $.get("views/" + page + ".html", function(data) {
         
         var html = Mustache.to_html(data, json);
         $("#container").html(html);
+        
+        pageData = json;
         
         if(callback) {
             callback();

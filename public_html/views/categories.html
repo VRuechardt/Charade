@@ -2,7 +2,7 @@
 
 {{#categories}}
 
-<div class="card toplevel-navigation" onclick="openPage('spielen', categories.categories[{{index}}]);">
+<div class="card toplevel-navigation" onclick="toggleFullScreen(); openPage('spielen', categories.categories[{{index}}], setupSpielen);">
     {{name}}
 </div>
 
