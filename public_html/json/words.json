@@ -1,5 +1,6 @@
 {
     "categories": [{
+            "index": 0,
             "name": "﻿Komponisten",
             "words": [{
                     "name": "Johann Sebastian Bach",
@@ -93,6 +94,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 1,
             "name": "Comedians",
             "words": [{
                     "name": "Anke Engelke",
@@ -372,6 +374,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 2,
             "name": "American Pie",
             "words": [{
                     "name": "Apfelkuchen",
@@ -615,6 +618,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 3,
             "name": "Musikinstrumente",
             "words": [{
                     "name": "Akkordeon",
@@ -894,6 +898,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 4,
             "name": "Drittes Reich",
             "words": [{
                     "name": "Joseph Goebbels",
@@ -960,6 +965,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 5,
             "name": "Wirtschaft & Geld",
             "words": [{
                     "name": "Anleger",
@@ -1197,6 +1203,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 6,
             "name": "Währungen",
             "words": [{
                     "name": "Brasilianischer Real",
@@ -1368,6 +1375,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 7,
             "name": "Länder & Menschen",
             "words": [{
                     "name": "Ägypter",
@@ -1644,6 +1652,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 8,
             "name": "Tiere",
             "words": [{
                     "name": "Adler",
@@ -2025,6 +2034,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 9,
             "name": "Städte",
             "words": [{
                     "name": "Alexandria",
@@ -2463,6 +2473,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 10,
             "name": "Sportarten",
             "words": [{
                     "name": "Aerobic",
@@ -2700,6 +2711,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 11,
             "name": "Essen",
             "words": [{
                     "name": "Blaukraut",
@@ -2772,6 +2784,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 12,
             "name": "Schimpfwörter",
             "words": [{
                     "name": "Affenmensch",
@@ -3006,6 +3019,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 13,
             "name": "Sex",
             "words": [{
                     "name": "69",
@@ -3198,6 +3212,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 14,
             "name": "Alkohol",
             "words": [{
                     "name": "Augustiner",
@@ -3429,6 +3444,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 15,
             "name": "Feierei",
             "words": [{
                     "name": "Bierpong",
@@ -3651,6 +3667,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 16,
             "name": "Filme - Best of",
             "words": [{
                     "name": "Shutter Island",
@@ -4062,6 +4079,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 17,
             "name": "Harry Potter",
             "words": [{
                     "name": "Harry Potter",
@@ -4506,6 +4524,7 @@
                     "diff": 1
                 }]
         }, {
+            "index": 18,
             "name": "How I Met Your Mother",
             "words": [{
                     "name": "Bro Code",
@@ -4848,6 +4867,7 @@
                     "diff": 1
                 }]
         }, {
+            "index": 19,
             "name": "Celebrities",
             "words": [{
                     "name": "Oprah Winfrey",
@@ -5214,6 +5234,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 20,
             "name": "Computerspiele",
             "words": [{
                     "name": "GTA",
@@ -5478,6 +5499,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 21,
             "name": "Kindergeschichten",
             "words": [{
                     "name": "Rotkäppchen",
@@ -5838,6 +5860,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 22,
             "name": "Charts",
             "words": [{
                     "name": "Traum - CRO",
@@ -5991,6 +6014,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 23,
             "name": "Musik Klassiker",
             "words": [{
                     "name": "Like A Rolling Strone - Bob Dylan",
@@ -6168,6 +6192,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 24,
             "name": "Wissenschaft",
             "words": [{
                     "name": "Dopplereffekt",
@@ -6510,6 +6535,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 25,
             "name": "Sehenswürdigkeiten",
             "words": [{
                     "name": "Brandenburger Tor",
@@ -6708,6 +6734,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 26,
             "name": "Marken",
             "words": [{
                     "name": "Nike",
@@ -7071,6 +7098,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 27,
             "name": "Modemarken",
             "words": [{
                     "name": "Chanel",
@@ -7200,6 +7228,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 28,
             "name": "Autos & Zubehör",
             "words": [{
                     "name": "BMW",
@@ -7506,6 +7535,7 @@
                     "diff": 1
                 }]
         }, {
+            "index": 29,
             "name": "Religion",
             "words": [{
                     "name": "Christentum",
@@ -7746,6 +7776,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 30,
             "name": "Bayrisch",
             "words": [{
                     "name": "Watschnbam",
@@ -7827,6 +7858,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 31,
             "name": "Antike",
             "words": [{
                     "name": "Zeus",
@@ -8028,6 +8060,7 @@
                     "diff": 0
                 }]
         }, {
+            "index": 32,
             "name": "Politiker",
             "words": [{
                     "name": "Andrea Nahles",
@@ -8220,6 +8253,7 @@
                     "diff": 1
                 }]
         }, {
+            "index": 33,
             "name": "Frauen",
             "words": [{
                     "name": "Angela Merkel",

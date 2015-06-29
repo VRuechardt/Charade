@@ -1,0 +1,12 @@
+
+
+{{#categories}}
+
+<div class="card toplevel-navigation" onclick="openPage('spielen', categories.categories[{{index}}]);">
+    {{name}}
+</div>
+
+{{/categories}}
+{{^categories}}
+Keine Kategorien :(
+{{/categories}}

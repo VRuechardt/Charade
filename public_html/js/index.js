@@ -10,7 +10,6 @@ window.addEventListener("deviceorientation", function(event) {
 }, true);
 
 
-
 var categories;
 if(localStorage.getItem("categories")) {
     categories = JSON.parse(localStorage.getItem("categories"));
@@ -28,12 +27,16 @@ $.get("views/main.html", function(data) {
     $("#container").html(data);
 });
 
-function openPage(page, json) {
+function openPage(page, json, callback) {
     
     $.get("views/" + page + ".html", function(data) {
         
         var html = Mustache.to_html(data, json);
         $("#container").html(html);
+        
+        if(callback) {
+            callback();
+        }
         
     });
     
