@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta name="theme-color" content="#123458">
+        
+        <link rel="stylesheet" href="css/materialize.css">
+        
+        <link rel="stylesheet" media="all and (orientation:portrait)" href="css/portrait.css">
+        <link rel="stylesheet" media="all and (orientation:landscape)" href="css/landscape.css">
+        
+        <script type="text/javascript" src="js/libs/jquery/jquery.js"></script>
+        <script type="text/javascript" src="js/libs/mustache.js/mustache.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        
+    </head>
+    <body>
+        
+        <div id="container">
+            
+            Test
+            
+        </div>
+        
+        
+        
+        <!--<div class="btn start-game" onclick="toggleFullScreen();">Starten</div>-->
+        
+        
+        
+        <script type="text/javascript">
+            
+            function toggleFullScreen() {
+                
+                var doc = window.document;
+                var docEl = doc.documentElement;
+
+                var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+                var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+                if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+                    requestFullScreen.call(docEl);
+                } else {
+                    cancelFullScreen.call(doc);
+                }
+            }
+        </script>
+    </body>
+</html>

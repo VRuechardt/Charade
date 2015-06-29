@@ -1,0 +1,38 @@
+
+@mixin no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.start-game {
+    
+    @include no-select;
+    width: 80vw;
+    font-size: 20pt;
+    padding: 10px;
+    height: 55px;
+    position: absolute;
+    left: 10vw;
+    bottom: 20px;
+    
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    background-image: url(../img/bg.jpg);
+    overflow: auto;
+    position: fixed;
+}
+
+.toplevel-navigation {
+    
+    padding: 50px;
+    font-size: 20pt;
+    
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,UAAW;EAEP,WAAW,EAAE,MAAM;EAEnB,+BAAqB;IAEjB,OAAO,EAAE,YAAY;IACrB,WAAW,EAAE,IAAI",
+"sources": ["../scss/landscape.scss"],
+"names": [],
+"file": "landscape.css"
+}
