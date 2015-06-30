@@ -44,7 +44,7 @@ $(document).ready(function() {
     
     if(localStorage.getItem("auth")) {
         var auth = localStorage.getItem("auth");
-        $.post("backend/login.php", "auth=" + auth, function(data) {
+        $.post("http://93.135.73.38/Charade/public_html/backend/login.php", "auth=" + auth, function(data) {
             if(JSON.parse(data).success == 1) {
                 pages = [
                     {
@@ -130,7 +130,7 @@ function register() {
     var pwd = $("#password").val();
     
     if(email !== "" && pwd !== "" && username !== "") {
-        $.post("backend/register.php", "email=" + email + "&password=" + pwd + "&username=" + username, function(data) {
+        $.post("http://93.135.73.38/Charade/public_html/backend/register.php", "email=" + email + "&password=" + pwd + "&username=" + username, function(data) {
             var parsed = JSON.parse(data);
             if(parsed.success == 1) {
                 localStorage.setItem("auth", parsed.auth);
