@@ -1,7 +1,8 @@
-function searchCategories(input){
-    var text = toOnlyLiterals(input);
+function searchCategories(){
+    var text = toOnlyLiterals($('#search-categories-text').val());
     for(var i in categories.categories){
-        if(!toOnlyLiterals(categories.categories[i].name).includes(text))$('#category-wrapper').children(i).css({'display':'none'});
+        if(toOnlyLiterals(categories.categories[i].name).includes(text))$($('#category-wrapper').children()[i]).css({'display':'block'});
+        else $($('#category-wrapper').children()[i]).css({'display':'none'});
     }
 }
 
