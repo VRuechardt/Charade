@@ -40,11 +40,15 @@ if(localStorage.getItem("categories")) {
     });
 }
 
+window.applicationCache.addEventListener("error", function(e) {
+  alert("Error fetching manifest: a good chance we are offline");
+});
+
 $(document).ready(function() {
-    
+
     if(localStorage.getItem("auth")) {
         var auth = localStorage.getItem("auth");
-        $.post("http://93.135.73.38/Charade/public_html/backend/login.php", "auth=" + auth, function(data) {
+        $.post("backend/login.php", "auth=" + auth, function(data) {
             if(JSON.parse(data).success == 1) {
                 pages = [
                     {
@@ -58,10 +62,22 @@ $(document).ready(function() {
                     setupServer();
                 });
             } else {
+                pages = [
+                    {
+                        page: "main",
+                        json: {},
+                        callback: setupServer
+                    }
+                ];
                 $.get("views/register.html", function(data) {
                     $("#container").html(data);
                 });
             }
+        }).fail(function() {
+            $.get("views/main.html", function(data) {
+                $("#container").html(data);
+                setupServer();
+            });
         });
     } else {
     
@@ -130,7 +146,7 @@ function register() {
     var pwd = $("#password").val();
     
     if(email !== "" && pwd !== "" && username !== "") {
-        $.post("http://93.135.73.38/Charade/public_html/backend/register.php", "email=" + email + "&password=" + pwd + "&username=" + username, function(data) {
+        $.post("backend/register.php", "email=" + email + "&password=" + pwd + "&username=" + username, function(data) {
             var parsed = JSON.parse(data);
             if(parsed.success == 1) {
                 localStorage.setItem("auth", parsed.auth);

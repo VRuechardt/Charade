@@ -10,9 +10,13 @@ font/material-design-icons/Material-Design-Icons.woff
 font/material-design-icons/Material-Design-Icons.woff2
 js/index.js
 js/spielen.js
+js/online.js
 js/words.js
+js/edit.js
+js/editUtil.js
 js/libs/jquery/jquery.js
 js/libs/mustache.js/mustache.js
+js/materialize.js
 json/words.json
 views/categories.html
 views/edit.html
@@ -20,3 +24,7 @@ views/main.html
 views/review.html
 views/spielen.html
 views/words.html
+
+NETWORK:
+backend/login.php
+backend/register.php
