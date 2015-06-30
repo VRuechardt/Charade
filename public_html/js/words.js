@@ -8,7 +8,7 @@ function submidWords(index){
         openPage('words',categories.categories[index]);
     }
     else{
-        toast('Das Word ist bereits in der Liste',1000);
+        Materialize.toast('Das Word ist bereits in der Liste',1000);
     }
 }  
 

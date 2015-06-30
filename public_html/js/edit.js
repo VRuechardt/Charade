@@ -14,7 +14,7 @@ function submidCategory(index){
         openPage('edit',categories);
     }
     else{
-        toast('Das Word ist bereits in der Liste',1000);
+        Materialize.toast('Das Word ist bereits in der Liste',1000);
     }
 }  
 
