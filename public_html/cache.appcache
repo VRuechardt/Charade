@@ -1,0 +1,22 @@
+CACHE MANIFEST
+index.html
+css/landscape.css
+css/materialize.css
+css/portrait.css
+font/material-design-icons/Material-Design-Icons.ttf
+font/material-design-icons/Material-Design-Icons.eot
+font/material-design-icons/Material-Design-Icons.svg
+font/material-design-icons/Material-Design-Icons.woff
+font/material-design-icons/Material-Design-Icons.woff2
+js/index.js
+js/spielen.js
+js/words.js
+js/libs/jquery/jquery.js
+js/libs/mustache.js/mustache.js
+json/words.json
+views/categories.html
+views/edit.html
+views/main.html
+views/review.html
+views/spielen.html
+views/words.html
