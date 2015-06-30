@@ -12,6 +12,7 @@ function submidCategory(index){
         categories.categories.unshift({'index':0,'name':text,'words':[]});
         ajustArrayIndex(categories.categories);
         openPage('edit',categories);
+        $("#action-button-save").css({display: "block"});
     }
     else{
         Materialize.toast('Das Word ist bereits in der Liste',1000);
@@ -25,4 +26,17 @@ function editCategory(){
         if(checkForUnique(categories.categories,$('#edit-words-text').text()))$('#edit-words-text').css({'color':'black'});
         else $('#edit-words-text').css({'color':'red'});
     });
+}
+
+function saveUpdatedWords() {
+    
+    localStorage.setItem("categories", JSON.stringify(categories)); 
+    $("#action-button-save").css({display: "none"});
+    
+}
+
+function exitEdit() {
+    
+    Materialize.toast("Zum speichern auf den Button rechts oben klicken", 4000, "red white-text");
+    
 }

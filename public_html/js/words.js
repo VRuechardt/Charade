@@ -6,6 +6,7 @@ function submidWords(index){
         categories.categories[index].words.unshift({'index':0,'name':text,'diff':0,'selfcreated':{'categorieindex':index,'wordindex':0}});
         ajustArrayIndex(categories.categories[index].words);
         openPage('words',categories.categories[index]);
+        $("#action-button-save").css({display: "block"});
     }
     else{
         Materialize.toast('Das Word ist bereits in der Liste',1000);
@@ -25,6 +26,7 @@ function removeWord(categorie,word){
     categories.categories[categorie].words.splice(word,1);
     ajustArrayIndex(categories.categories[categorie].words);
     openPage('words',categories.categories[categorie]);
+    $("#action-button-save").css({display: "block"});
 }
 
 
