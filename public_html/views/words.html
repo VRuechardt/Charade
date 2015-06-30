@@ -1,12 +1,17 @@
 <div class='card toplevel-navigation'>
-    <div id='edit-words' onclick="editCategory()">Wort Hinzufügen</div>
+    <div id='edit-words' onclick="editWords({{index}})">Wort Hinzufügen</div>
     <div style="display: none" id='editable-words'>
     <div id="edit-words-text" contenteditable></div>
-    <div onclick="submidContent({{index}})">add</div>
+    <div id="submid-word" onclick="submidWords({{index}})">add</div>
     </div>
 </div>
 {{#words}}
 <div class='card toplevel-navigation'>
     {{name}}
+    {{#selfcreated}} <div onclick="removeWord({{categorieindex}},{{wordindex}})">-</div>{{/selfcreated}}
+    {{^selfcreated}}{{/selfcreated}}
 </div>
+{{/words}}
+{{^words}}
+Keine Wörter gefunden
 {{/words}}

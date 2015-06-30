@@ -1,13 +1,23 @@
+<div id="search-categories"><input type="text"></div>
+
+<div class='card toplevel-navigation'>
+    <div id='edit-words' onclick="editCategory()">Kategorie Hinzufügen</div>
+    <div style="display: none" id='editable-words'>
+    <div id="edit-words-text" contenteditable></div>
+    <div id="submid-word" onclick="submidCategory({{index}})">add</div>
+    </div>
+</div>
 
     
-
+<div id="category-wrapper">
 {{#categories}}
 
 <div class="card toplevel-navigation" onclick="openPage('words',categories.categories[{{index}}])">
-    {{name}}
+    {{name}} [{{words.length}}]
 </div>
 
 {{/categories}}
 {{^categories}}
 Keine Kategorien
 {{/categories}}
+<div id="category-wrapper">
