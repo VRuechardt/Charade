@@ -40,13 +40,68 @@ if(localStorage.getItem("categories")) {
     });
 }
 
-
-$.get("views/main.html", function(data) {
-    $("#container").html(data);
+$(document).ready(function() {
+    
+    if(localStorage.getItem("auth")) {
+        var auth = localStorage.getItem("auth");
+        $.post("backend/login.php", "auth=" + auth, function(data) {
+            if(JSON.parse(data).success == 1) {
+                pages = [
+                    {
+                        page: "main",
+                        json: {},
+                        callback: setupServer
+                    }
+                ];
+                $.get("views/main.html", function(data) {
+                    $("#container").html(data);
+                    setupServer();
+                });
+            } else {
+                $.get("views/register.html", function(data) {
+                    $("#container").html(data);
+                });
+            }
+        });
+    } else {
+    
+        $.get("views/register.html", function(data) {
+            $("#container").html(data);
+        });
+        
+    }
 });
 
+
+var pages = [
+    {
+        page: "register",
+        json: {},
+        callback: undefined,
+        exit: undefined
+    }
+];
 var pageData = categories;
-function openPage(page, json, callback) {
+function openPage(page, json, callback, back, exit) {
+    
+    if(pages[pages.length-1].exit) {
+        pages[pages.length-1].exit();
+    }
+    
+    if(!back) {
+        pages.push({
+            page: page,
+            json: json,
+            callback: callback,
+            exit: exit
+        });
+    }
+    
+    if((pages.length > 2 && back) || (pages.length > 1 && !back)) {
+        $("#navigation-back").fadeIn();
+    } else {
+        $("#navigation-back").fadeOut();
+    }
     
     $.get("views/" + page + ".html", function(data) {
         
@@ -62,3 +117,40 @@ function openPage(page, json, callback) {
     });
     
 }
+
+function back() {
+    var data = pages[pages.length-2];
+    openPage(data.page, data.json, data.callback, true, data.exit);
+    pages.pop();
+}
+
+function register() {
+    var username = $("#username").val().trim();
+    var email = $("#email").val().trim();
+    var pwd = $("#password").val();
+    
+    if(email !== "" && pwd !== "" && username !== "") {
+        $.post("backend/register.php", "email=" + email + "&password=" + pwd + "&username=" + username, function(data) {
+            var parsed = JSON.parse(data);
+            if(parsed.success == 1) {
+                localStorage.setItem("auth", parsed.auth);
+                pages = [
+                    {
+                        page: "main",
+                        json: {},
+                        callback: setupServer
+                    }
+                ];
+                $.get("views/main.html", function(data) {
+                    $("#container").html(data);
+                    setupServer();
+                });
+            } else {
+                Materialize.toast('Falsches Passwort / Email schon vergeben', 4000, "red white-text");
+            }
+        });
+    } else {
+        Materialize.toast('Geben Sie Benutzername, E-Mail und Passwort ein', 4000, "red white-text");
+    }
+}
+

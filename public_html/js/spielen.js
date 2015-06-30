@@ -14,7 +14,10 @@ function setupSpielen() {
     gameTimeLeft = defaultGameTime;
     currentWord = randomWord(tmpWords);
     $("#wordSpielen").html(currentWord.name);
+    $("#header").css({backgroundColor: "rgba(0, 0, 0, 0)"});
+    $("#container").css({height: "100vh", marginTop: "-90px", pointerEvents: "none"});
     window.setTimeout(countdown, 1000);
+    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
     
     window.addEventListener("deviceorientation", function(event) {
 
@@ -57,7 +60,21 @@ function setupSpielen() {
     
 }
 
+function exitSpielen() {
+    
+    $("#header").animate({backgroundColor: "#555"}, function() {
+        $("#container").css({height: "calc(100vh - 90px)", marginTop: "0", pointerEvents: ""});
+    });
+    
+}
+
 function nextWord(correct) {
+    
+    if(correct) {
+        navigator.vibrate([1000]);
+    } else {
+        navigator.vibrate([100, 100, 100, 100, 100]);
+    }
     
     colorLocked = true;
     $("#spielenContainer").css({backgroundColor: "rgba(0, 0, 0, 0)"});
