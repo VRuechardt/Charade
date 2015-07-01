@@ -8075,7 +8075,8 @@ nav {
   right: 0;
   top: 0;
   bottom: 0;
-  color: white; }
+  color: white;
+  background-color: black; }
   .spielen-container .word {
     width: 100%;
     text-align: center;
