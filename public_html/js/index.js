@@ -49,6 +49,7 @@ $(document).ready(function() {
     if(localStorage.getItem("auth")) {
         var auth = localStorage.getItem("auth");
         $.post("backend/login.php", "auth=" + auth, function(data) {
+            console.log("data: ", data);
             if(JSON.parse(data).success == 1) {
                 pages = [
                     {
