@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "charade");
+include("db.php");
 
 if(isset($_POST["auth"])) {
     $auth = $_POST["auth"];
