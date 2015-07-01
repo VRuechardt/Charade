@@ -2,7 +2,7 @@
 
 $link;
 
-if($_SERVER["HTTP_HOST"] == "s582310763.online.de") {
+if($_SERVER["HTTP_HOST"] == "s582310763.online.de" || strpos($_SERVER["HTTP_HOST"], "harade.de") > 0) {
     
     $host_name  = "db582319613.db.1and1.com";
     $database   = "db582319613";
