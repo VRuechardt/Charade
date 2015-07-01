@@ -31,7 +31,7 @@ function setupServer() {
     
     if(!conn) {
         //conn = new WebSocket('ws://192.168.178.50:8080');
-        conn = new WebSocket('ws://93.135.73.38:8080');
+        conn = new WebSocket('ws://93.135.95.10:8080');
         var auth = localStorage.getItem("auth");
         conn.onopen = function(e) {
             console.log("Connection established!");
