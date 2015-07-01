@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "charade");
+include("db.php");
 
 if(isset($_POST["password"]) && isset($_POST["email"]) && isset($_POST["username"])) {
     

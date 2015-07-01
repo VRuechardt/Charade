@@ -1,5 +1,5 @@
 
-var defaultGameTime = 20;
+var defaultGameTime = 120;
 
 var tmpWords = [];
 var answered = [];
