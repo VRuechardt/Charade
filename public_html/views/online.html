@@ -13,11 +13,11 @@
 <div id="modalSetCategory" class="modal bottom-sheet">
     <div class="modal-content">
         <h4>Kategorie wählen</h4>
-        <ul class="collection" id="categoryCollection">
+        <div class="collection" id="categoryCollection">
             {{#categories}}
-                <li class="collection-item">{{name}}</li>
+                <a onclick="javascript: pickCategory({{index}});" class="collection-item" id="category-{{index}}}}">{{name}}</a>
             {{/categories}}
-        </ul>
+        </div>
     </div>
     <div class="modal-footer">
         <a href="#!" class="waves-effect waves-purple btn-flat" onclick="createRoom();">Erstellen</a>

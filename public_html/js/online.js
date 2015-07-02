@@ -1,5 +1,5 @@
 
-
+var selectedCategory = 0;
 function setupOnline() {
     
     $("#title").text("Räume");
@@ -14,6 +14,14 @@ function setupOnline() {
     });
     ownRoom = false;
     
+    $($("#categoryCollection").find("a")[0]).toggleClass("active", true);
+    
+}
+
+function pickCategory(i) {
+    $("#category-" + selectedCategory).toggleClass("active", false);
+    selectedCategory = i;
+    $("#category-" + selectedCategory).toggleClass("active", true);
 }
 
 function exitOnline() {
