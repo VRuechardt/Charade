@@ -14,7 +14,7 @@ if(isset($_POST["password"]) && isset($_POST["email"]) && isset($_POST["username
         $res = mysqli_query($link, "SELECT * FROM users WHERE email = '$email' AND password = '$pwd'");
         if(mysqli_num_rows($res) == 1) {
             mysqli_query($link, "UPDATE users SET auth = '$auth' WHERE email = '$email' AND password = '$pwd'");
-            echo "{\"success\": 1, \"auth\": \"$auth\"}";
+            echo "{\"success\": 1, \"auth\": \"$auth\", \"email\": \"$email\"}";
         } else {
             echo "{\"success\": 0}";
         }

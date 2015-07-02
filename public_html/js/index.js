@@ -151,6 +151,7 @@ function register() {
             var parsed = JSON.parse(data);
             if(parsed.success == 1) {
                 localStorage.setItem("auth", parsed.auth);
+                localStorage.setItem("email", parsed.email);
                 pages = [
                     {
                         page: "main",
