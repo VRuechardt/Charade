@@ -169,6 +169,15 @@ function requestStartGame() {
 var onlineStartCountdown = 5;
 function startOnlineGame() {
     
+    if(ownRoom) {
+        var send = "CATEGORY\n" + currentRoom;
+        var cat = categories.categories[selectedCategory];
+        for(var i in cat.words) {
+            send += "\n" + cat.words[i].name;
+        }
+        conn.send(send);
+    }
+    
     $("#startCountdown").fadeIn();
     onlineStartCountdown = 5;
     var count = function() {
@@ -178,7 +187,7 @@ function startOnlineGame() {
             window.setTimeout(count, 1000);
         } else {
             $("#startCountdown").fadeOut();
-            openPage(playOnline, {}, setupPlayOnline, false, exitPlayOnline);
+            openPage("playOnline", {}, setupPlayOnline, false, exitPlayOnline);
         }
     };
     window.setTimeout(count, 1000);
