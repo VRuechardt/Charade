@@ -178,8 +178,17 @@ function startOnlineGame() {
             window.setTimeout(count, 1000);
         } else {
             $("#startCountdown").fadeOut();
+            openPage(playOnline, {}, setupPlayOnline, false, exitPlayOnline);
         }
     };
     window.setTimeout(count, 1000);
+    
+}
+
+function setupPlayOnline() {
+    
+}
+
+function exitPlayOnline() {
     
 }
