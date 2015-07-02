@@ -32,7 +32,7 @@ function setupServer() {
     if(!conn) {
         //conn = new WebSocket('ws://192.168.178.50:8080');
         conn = new WebSocket('ws://77.4.125.56:8080');
-        var auth = localStorage.getItem("auth");
+        var auth = localStorage.getItem("email");
         conn.onopen = function(e) {
             console.log("Connection established!");
             conn.send("AUTH\n" + auth);
