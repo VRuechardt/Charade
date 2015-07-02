@@ -199,7 +199,7 @@ function startOnlineGame() {
 function setupPlayOnline() {
     
     if(ownRoom) {
-        conn.send("WORD");
+        conn.send("WORD\n" + currentRoom);
     }
     
 }
