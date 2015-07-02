@@ -209,3 +209,15 @@ function exitPlayOnline() {
     
     
 }
+
+function skipOnline() {
+    
+    conn.send("SKIP\n" + currentRoom);
+    
+}
+
+function correctOnline() {
+    
+    conn.send("YES\n" + currentRoom);
+    
+}
