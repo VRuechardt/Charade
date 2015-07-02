@@ -92,6 +92,8 @@ function setupServer() {
                 } else {
                     startOnlineGame();
                 }
+            } else if(segments[0] === "WORD") {
+                $("#onlineWord").html(segments[1]);
             }
             
         };
@@ -195,6 +197,10 @@ function startOnlineGame() {
 }
 
 function setupPlayOnline() {
+    
+    if(ownRoom) {
+        conn.send("WORD");
+    }
     
 }
 
