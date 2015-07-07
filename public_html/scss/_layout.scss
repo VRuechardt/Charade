@@ -1,7 +1,5 @@
 
-body {
-    background-color: #eee;
-}
+
 
 @mixin no-select {
     -webkit-touch-callout: none;
@@ -10,6 +8,11 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+body {
+    background-color: #eee;
+    @include no-select;
 }
 
 .start-game {

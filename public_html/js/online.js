@@ -94,6 +94,13 @@ function setupServer() {
                 }
             } else if(segments[0] === "WORD") {
                 $("#onlineWord").html(segments[1]);
+                if(segments[1] === "DU BIST DRAN") {
+                    $("#onlineCorrect").css({display: "none"});
+                    $("#onlineSkip").css({display: "none"});
+                } else {
+                    $("#onlineCorrect").css({display: "block"});
+                    $("#onlineSkip").css({display: "block"});
+                }
             }
             
         };
@@ -189,6 +196,7 @@ function startOnlineGame() {
             window.setTimeout(count, 1000);
         } else {
             $("#startCountdown").fadeOut();
+            $("#quit-room").fadeOut();
             openPage("playOnline", {}, setupPlayOnline, false, exitPlayOnline);
         }
     };
@@ -205,8 +213,6 @@ function setupPlayOnline() {
 }
 
 function exitPlayOnline() {
-    
-    
     
 }
 
